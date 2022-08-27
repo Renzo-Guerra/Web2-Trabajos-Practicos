@@ -8,17 +8,17 @@ Nota: Las entradas de los ejercicios deben ser cargadas desde un formulario HTML
 * [Manejo de checkbox en PHP [01 de 03]](https://www.youtube.com/watch?v=ZnDwAAMLpC4) <!-- Mandar desde html a php un nombre[] -->
 
 ## Tabla de contenido
-1. [Ejercicio 1](#ejercicio1);
-2. [Ejercicio 2](#ejercicio2);
-3. [Ejercicio 3](#ejercicio3);
-4. [Ejercicio 4](#ejercicio4);
-5. [Ejercicio 5](#ejercicio5);
-6. [Ejercicio 6](#ejercicio6);
-7. [Ejercicio 7](#ejercicio7);
-8. [Ejercicio 8](#ejercicio8);
-9. [Ejercicio 9](#ejercicio9);
-10. [Ejercicio 10](#ejercicio10);
-11. [Ejercicio 11](#ejercicio11);
+1. [Ejercicio 1](#ejercicio1)
+2. [Ejercicio 2](#ejercicio2)
+3. [Ejercicio 3](#ejercicio3)
+4. [Ejercicio 4](#ejercicio4)
+5. [Ejercicio 5](#ejercicio5)
+6. [Ejercicio 6](#ejercicio6)
+7. [Ejercicio 7](#ejercicio7)
+8. [Ejercicio 8](#ejercicio8)
+9. [Ejercicio 9](#ejercicio9)
+10. [Ejercicio 10](#ejercicio10)
+11. [Ejercicio 11](#ejercicio11)
 
 ### Ejercicio_1
 Escriba un script php que muestre una página html completa generada desde el servidor con un encabezado de primer nivel (h1) con el famoso “Hola mundo!”.
