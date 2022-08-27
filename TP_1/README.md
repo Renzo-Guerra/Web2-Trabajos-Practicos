@@ -5,6 +5,7 @@ Nota: Las entradas de los ejercicios deben ser cargadas desde un formulario HTML
 ## Links utiles
 ### 📖 Documentacion
 * [Atributo autocomplete](https://developer.mozilla.org/es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion)
+* [Manejo de checkbox en PHP [01 de 03]](https://www.youtube.com/watch?v=ZnDwAAMLpC4) <!-- Mandar desde html a php un nombre[] -->
 
 ## Tabla de contenido
 1. [Ejercicio 1](#ejercicio1);
