@@ -6,6 +6,15 @@ Nota: Las entradas de los ejercicios deben ser cargadas desde un formulario HTML
 ### 📖 Documentacion
 * [Atributo autocomplete](https://developer.mozilla.org/es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion)
 * [Manejo de checkbox en PHP [01 de 03]](https://www.youtube.com/watch?v=ZnDwAAMLpC4) <!-- Mandar desde html a php un nombre[] -->
+* [array_fill_keys()](https://www.php.net/manual/es/function.array-fill-keys.php)
+* [range](https://www.php.net/manual/es/function.range.php)
+
+### 📽 Videos
+* [Get URL Parameters in JavaScript | URLSearchParams](https://www.youtube.com/watch?v=CZP1iQFQjEY)
+* [URLSearchParams in JavaScript - Constructing Query Strings](https://www.youtube.com/watch?v=-D5YGTkTBH4) <!-- Explica el porque debemos hacer la conversion url -->
+* [How to use URL Objects (URL Interface) - JavaScript Tutorial](https://www.youtube.com/watch?v=RIBiQ5GNYWo)
+* [range en PHP](https://www.php.net/manual/es/function.range.php)
+* [DOM - Curso JavaScript Moderno - #03 createElement](https://www.youtube.com/watch?v=DMGiOhH8jcQ)
 
 ## Tabla de contenido
 1. [Ejercicio 1](#ejercicio1)
