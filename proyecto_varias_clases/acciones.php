@@ -1,11 +1,35 @@
 <?php
   include_once 'db.php';
 
+  /*------------------ Funciones llamadas por el router ------------------*/
   function showAll(){
     include_once 'templates/header.php';?>
     <div class="container-md py-4">
-      <div class="row">
-        <!-- Aca deberia hacer otra col con el formulario para añadir una nueva task -->
+      <div class="row flex flex-column">
+        <!-- Se muestra el formulario -->
+        <div class="col mb-5">
+          <!-- El action deberia ir al archivo que va a procesar la info del form -->
+          <form action="" class="bg-primary p-3">
+            <div class="row d-flex align-items-center">
+              <div class="col-3 d-flex flex-column">
+                <label for="title">Titulo:</label>
+                <input type="text" name="title" id="title" placeholder="Task title" required>
+              </div>
+              <div class="col-5 d-flex flex-column">
+                <label for="body">Description:</label>
+                <textarea name="body" id="body" cols="30" rows="1" placeholder="Description" required></textarea>
+              </div>
+              <div class="col-3 d-flex flex-column">
+                <label for="importance">Importance:</label>
+                <input type="number" name="importance" id="importance" placeholder="Task importance" required>
+              </div>
+              <div class="col-1">
+                <button type="submit" class="btn btn-secondary">Add</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- Se muestra la tabla  -->
         <div class="col">
           <table class="table table-bordered"><?php
           // realizamos la conexion
@@ -35,11 +59,13 @@
             </tr><?php
           }?>
           </table>
-        </div>
+        </div>       
       </div>
     </div>
     <?php
+    include_once 'templates/footer.php';
   }
+/*------------------ Funciones llamadas por el router ------------------*/
 
 
   /*------------------ Funciones auxiliares ------------------*/
