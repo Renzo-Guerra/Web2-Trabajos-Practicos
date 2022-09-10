@@ -20,3 +20,14 @@
 
     return $tasks;
   }
+
+  function addTaskToDB($title, $body, $importance){
+    $db = openDB();
+    // En caso de que la conexion sea exitosa
+    if($db != false){
+      // Se prepara la peticion
+      $query = $db->prepare("INSERT INTO task (title, body, importance, completed) VALUES (?, ?, ?, ?)");
+      // Se ejecuta la peticion
+      $query->execute([$title, $body, $importance, false]);
+    }
+  }

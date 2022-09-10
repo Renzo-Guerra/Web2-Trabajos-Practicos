@@ -9,7 +9,7 @@
         <!-- Se muestra el formulario -->
         <div class="col mb-5">
           <!-- El action deberia ir al archivo que va a procesar la info del form -->
-          <form action="" class="bg-primary p-3">
+          <form action="add" class="bg-primary p-3">
             <div class="row d-flex align-items-center">
               <div class="col-3 d-flex flex-column">
                 <label for="title">Titulo:</label>
@@ -64,6 +64,31 @@
     </div>
     <?php
     include_once 'templates/footer.php';
+  }
+
+  /**
+   * Para que una tarea se agregue, los 3 campos del formulario no deben estar vacios/nulos, y el campo
+   * importanse debe ser un numero de entre el 1 y el 5 (ambos incluidos) 
+   */
+  function addTask(){
+    define("MIN_IMPORTANCE", 1);
+    define("MAX_IMPORTANCE", 5);
+
+    if(isset($_GET['title']) && isset($_GET['body']) && isset($_GET['importance'])){
+      if(!empty($_GET['title']) && !empty($_GET['body']) && !empty($_GET['importance'])){
+        $title = $_GET['title'];
+        $body = $_GET['body'];
+        $importance = $_GET['importance'];
+        // Se valida que importance este dentro del rango establedido
+        if(($importance >= MIN_IMPORTANCE) && ($importance <= MAX_IMPORTANCE)){
+          // Se agrega la task a la DB
+          var_dump($title, $body, $importance);
+          addTaskToDB($title, $body, $importance);
+        }
+      }
+    }
+    // redireccion 302
+    header("Location: " . BASE_URL);
   }
 /*------------------ Funciones llamadas por el router ------------------*/
 
