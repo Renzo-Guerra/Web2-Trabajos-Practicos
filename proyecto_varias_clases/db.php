@@ -31,3 +31,12 @@
       $query->execute([$title, $body, $importance, false]);
     }
   }
+  
+  // Dado un id lo elimina (En caso de que no exista solo recarga la pagina (por si lo mandan manualmente por la url))
+  function deleteTaskFromDB($id_to_delete){
+    $db = openDB();
+    if($db != false){
+      $query = $db->prepare("DELETE FROM task WHERE id = ?;");
+      $query->execute([$id_to_delete]);
+    }
+  }

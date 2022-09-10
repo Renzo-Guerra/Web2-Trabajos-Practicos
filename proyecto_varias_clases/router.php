@@ -22,5 +22,6 @@
     // Inicio (default)
     case 'list': showAll(); break;
     case 'add': addTask(); break;
+    case 'delete': deleteTask($params[1]); break;
     default: echo "404 not found"; break;
   }

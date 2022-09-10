@@ -90,6 +90,15 @@
     // redireccion 302
     header("Location: " . BASE_URL);
   }
+
+  function deleteTask($id_to_delete){
+    if((!empty($id_to_delete))  &&  ($id_to_delete > 0)){
+      deleteTaskFromDB($id_to_delete);
+    }
+
+    // redireccion 302
+    header("Location: " . BASE_URL);
+  }
 /*------------------ Funciones llamadas por el router ------------------*/
 
 
@@ -102,6 +111,7 @@
         <th scope="col">Description</th>
         <th scope="col">Importance</th>
         <th scope="col">Status</th>
+        <th scope="col">Delete button</th>
       </tr>
     </thead><?php
   }
@@ -113,6 +123,7 @@
       <td><?php echo $data->body ?></td>
       <td class="text-center"><?php echo $data->importance ?></td>
       <td class="text-center"><?php echo ($data->completed == 1)? "Completed" : "Not completed";?></td>
+      <td class="text-center"><a href="<?php echo "delete/$data->id" ?>" class="btn btn-danger">Delete</a></td>
     </tr><?php
   }
   /*------------------ Funciones auxiliares ------------------*/
