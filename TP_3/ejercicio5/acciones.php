@@ -7,6 +7,23 @@
     tabla();
   }
 
+  function mostrarResultadosParecidos(){
+    if(isset($_GET["busqueda"]) && !empty($_GET["busqueda"])){
+      $resultados = traerParecidos($_GET["busqueda"]);
+      
+      var_dump($resultados);
+    }
+  }
+
+  function buscador(){?>
+    <form action="mostrarResultadosParecidos">
+      <label>Buscar: <input type="text" name="busqueda" placeholder="Palabra a buscar" required></label>      
+      
+      <button type="submit">Buscar</button>
+    </form>
+    <?php
+  }
+
   function formularioAgregar(){?>
     <form action="agregarMateria">
       <label>Nombre materia: <input type="text" name="materia" placeholder="Materia" required></label>

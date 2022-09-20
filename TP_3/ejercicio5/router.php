@@ -26,5 +26,6 @@
       }
       break;
     }
+    case 'mostrarResultadosParecidos': mostrarResultadosParecidos(); break;
     default: echo "404 not found"; break;
   }

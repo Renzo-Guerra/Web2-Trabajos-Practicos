@@ -9,6 +9,16 @@
     return $db;
   }
 
+  function traerParecidos($busqueda){
+    $db = abrirBD();
+    $query = $db->prepare("SELECT * FROM materia WHERE nombre LIKE ? OR nombre_profesor LIKE ?");
+    $query->execute([$busqueda, $busqueda]);
+    $resultados = $query->fetchAll(PDO::FETCH_OBJ);
+    
+    return $resultados;
+  }
+
+
   function traerTodo(){
     $db = abrirBD();
     if(!$db) return false;
